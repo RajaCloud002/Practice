@@ -54,7 +54,7 @@ resource "aws_security_group_rule" "ssh" {
   security_group_id = aws_security_group.my_sg.id
 }
 resource "aws_instance" "Server" {
-  ami                    = "ami-005e54dee72cc1d00" # us-west-2
+  ami                    = "ami-0ceecbb0f30a902a6" # us-west-2
   instance_type          = "t2.micro"
   key_name               = "aws"
   vpc_security_group_ids = [aws_security_group.my_sg.id]
