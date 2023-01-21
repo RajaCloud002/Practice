@@ -1,16 +1,3 @@
-provider "aws" {
-  region = "us-west-2"
-}
-
-provider "aws" {
-  region = "eu-west-1"
-  alias = "eu"
-}
-
-variable "instance_type" {
-  type = string
-}
-
 locals {
   name = "raja"
 }
@@ -26,8 +13,8 @@ resource "aws_instance" "Server" {
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
   providers = {
-    aws = "aws.eu"
-   }
+    aws = aws.eu
+  }
 
   name            = "my-vpc"
   cidr            = "10.0.0.0/16"
@@ -42,8 +29,4 @@ module "vpc" {
     Terraform   = "true"
     Environment = "dev"
   }
-}
-
-output "public_ip" {
-  value = aws_instance.Server.public_ip
 }
