@@ -8,6 +8,7 @@ data "aws_vpc" "my_vpc" {
 data "template_file" "user_data" {
   template = file("./userdata.yaml")
 }
+
 resource "aws_key_pair" "key" {
   key_name   = "aws"
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCQH+/OB/Vc50gYyetVVLzb+N47RRStswogUvZSAw8/7ZhE6zxORlH221I9Lb4huSs7OlCAg865MIXIllNxFI2D4gmFA8WgeGhT6eNTd03LLp7a74uFv0rRMq5f2QMrNJB84uxDenS2ET5rquLFLGJAP3/Lzw+mcIUu9demxN7xi8bkEQcyiHb8zQUPpIo52IISYEUeILmTSn3uOa7R7SC6Cv8WEV3bNE/0Km4GmlNCT9zeXT7Pu0ViMz6UvTpjAQLs6OJQOtuUfmdrlYohaTBBtw4wpqRO48pwQ8oce1d1J3OhAkRUoJ/HXiQzDy0jU6LwtBHsAOfHpRlOf+MfQ1ch rsa-key-20221111"
