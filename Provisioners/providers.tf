@@ -1,4 +1,4 @@
-terraform {
+/*terraform {
   cloud {
     organization = "raja-aws-test-dev"
 
@@ -6,7 +6,7 @@ terraform {
       name = "practice-aws"
     }
   }
-}
+} */
 
 provider "aws" {
   region = "us-west-2"
