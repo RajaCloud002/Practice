@@ -10,7 +10,7 @@ resource "aws_instance" "Server" {
   }
 }
 
-module "vpc" {
+/*module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
   providers = {
     aws = aws.eu
@@ -29,4 +29,4 @@ module "vpc" {
     Terraform   = "true"
     Environment = "dev"
   }
-}
+}*/
