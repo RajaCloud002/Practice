@@ -61,6 +61,6 @@ resource "aws_instance" "Server" {
   user_data              = data.template_file.user_data.rendered
 
   tags = {
-    Name = "Stage-${local.name}"
+    Name = "VM-${local.name}"
   }
 }
