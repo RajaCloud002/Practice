@@ -10,6 +10,7 @@ resource "aws_instance" "Server" {
   }
 }
 
+
 /*module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
   providers = {
