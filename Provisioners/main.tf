@@ -5,7 +5,6 @@ locals {
 data "aws_vpc" "my_vpc" {
   id = "vpc-0e3c8ad080403d8e2"
 }
-
 data "template_file" "user_data" {
   template = file("./userdata.yaml")
 }
