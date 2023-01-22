@@ -53,6 +53,7 @@ resource "aws_security_group_rule" "ssh" {
   ipv6_cidr_blocks  = []
   security_group_id = aws_security_group.my_sg.id
 }
+
 resource "aws_instance" "Server" {
   ami                    = "ami-0ceecbb0f30a902a6" # us-west-2
   instance_type          = "t2.micro"
