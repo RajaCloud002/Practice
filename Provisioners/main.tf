@@ -65,3 +65,4 @@ resource "aws_instance" "Server" {
     Name = "VM-${local.name}"
   }
 }
+
