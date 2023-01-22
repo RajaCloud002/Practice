@@ -2,7 +2,6 @@ locals {
   name = "raja"
 }
 
-
 data "aws_vpc" "my_vpc" {
   id = "vpc-0e3c8ad080403d8e2"
 }
